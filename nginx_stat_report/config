@@ -1,0 +1,5 @@
+ngx_addon_name=ngx_http_stat_report_filter_module
+HTTP_AUX_FILTER_MODULES="$HTTP_AUX_FILTER_MODULES ngx_http_stat_report_filter_module"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/ngx_http_stat_report_filter_module.cpp $ngx_addon_dir/stat_report_proxy.cpp"
+CORE_LIBS="$CORE_LIBS -L ../../../../third_party_api/share/openapi_monitor/lib/ -lopenapimonitor_l5_client -L ../../../../../../outerlib/plib/base_class/extern_libs/json/lib/ -lextern_json"
+CORE_INCS="$CORE_INCS  -I ../../../../third_party_api/share/openapi_monitor/inc/ -I ../../../../../../outerlib/plib/base_class/extern_libs/json/include/"
